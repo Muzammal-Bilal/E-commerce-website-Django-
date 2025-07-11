@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+
+{% block content %}
+<body>
+  
+
+  <!-- ! modal search start -->
+  <div class="modal-search">
+    <div class="modal-wrapper">
+      <h3 class="modal-title">Search for products</h3>
+      <p class="modal-text">
+        Start typing to see products you are looking for.
+      </p>
+      <div class="search">
+        <input type="text" placeholder="Search a product" />
+        <button><i class="bi bi-search"></i></button>
+      </div>
+      </form>
+      <div class="search-result">
+        <div class="search-heading">
+          <h3>RESULT FROM PRODUCT</h3>
+        </div>
+        <div class="results">
+
+        </div>
+      </div>
+      <i class="bi bi-x-circle" id="close-modal-search"></i>
+    </div>
+  </div>
+  <!-- ! modal search end -->
+
+
+  <!-- ! account start -->
+  <section class="account-page">
+    <div class="container">
+      <div class="account-wrapper">
+        <div class="account-column">
+          <h2>Login</h2>
+          <form>
+            <div>
+              <label>
+                <span>Username or email address <span class="required">*</span></span>
+                <input type="text">
+              </label>
+            </div>
+            <div>
+              <label>
+                <span>Password <span class="required">*</span></span>
+                <input type="password">
+              </label>
+            </div>
+            <p class="remember">
+              <label>
+                <input type="checkbox">
+                <span>Remember Me</span>
+              </label>
+              <button class="btn btn-sm">Login</button>
+            </p>
+            <a href="#" class="form-link">Lost your password?</a>
+          </form>
+        </div>
+        <div class="account-column">
+          <h2>Register</h2>
+          <form>
+            <div>
+              <label>
+                <span>Username <span class="required">*</span></span>
+                <input type="text">
+              </label>
+            </div>
+            <div>
+              <label>
+                <span>Email Address <span class="required">*</span></span>
+                <input type="email">
+              </label>
+            </div>
+            <div>
+              <label>
+                <span>Password <span class="required">*</span></span>
+                <input type="password">
+              </label>
+            </div>
+            <div class="privacy-policy-text remember">
+              <p>
+                Your personal data will be used to support your experience throughout this website, to manage access to
+                your account, and for other purposes described in our <a href="#">privacy policy</a>.
+              </p>
+              <button class="btn btn-sm">Register</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ! account end -->
+
+  <!-- scripts start -->
+  <script src="js/main.js" type="module"></script>
+  <!-- scripts end -->
+</body>
+{% endblock %}
+</html>
