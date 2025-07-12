@@ -26,17 +26,21 @@ def blog(request):
     return render(request, "blog.html")
 
 def account(request):
-    """
-    Render a page with a custom message.
-    """
-    
-    return render(request, "account.html")
+    try:
+        username = request.POST.get("username")
+        password=request.POST.get("password")
+        print(f"Username: {username}, Password: {password}")
+        data={"username": username, "password": password}
+    except KeyError:
+        print("Username or password not provided in the request.")
+    return render(request, "account.html",data)
 
 def contact(request):
     """
     Render a page with a custom message.
     """
     
+
     return render(request, "contact.html")
 
 def shop(request):

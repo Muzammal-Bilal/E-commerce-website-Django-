@@ -36,17 +36,18 @@
       <div class="account-wrapper">
         <div class="account-column">
           <h2>Login</h2>
-          <form>
+          <form method="POST" action="/account/">
+            {% csrf_token %}
             <div>
               <label>
-                <span>Username or email address <span class="required">*</span></span>
-                <input type="text">
+                <label class="required"> Username or email address </label>
+                <input type="text"name="username">
               </label>
             </div>
             <div>
               <label>
-                <span>Password <span class="required">*</span></span>
-                <input type="password">
+                <label class="required">Password </label>
+                <input type="password" name="password">
               </label>
             </div>
             <p class="remember">
@@ -54,9 +55,12 @@
                 <input type="checkbox">
                 <span>Remember Me</span>
               </label>
-              <button class="btn btn-sm">Login</button>
+              <button class="btn btn-sm" type="submit">Login</button>
             </p>
+
+           
             <a href="#" class="form-link">Lost your password?</a>
+
           </form>
         </div>
         <div class="account-column">

@@ -16,7 +16,7 @@
       <div class="container">
         <p>
           SUMMER SALE FOR ALL SWIM SUITS AND FREE EXPRESS INTERNATIONAL
-          DELIVERY - OFF 50%! <a href="shop.html">SHOP NOW</a>
+          DELIVERY - OFF 50%! <a href="/shop">SHOP NOW</a>
         </p>
       </div>
     </div>
@@ -51,7 +51,8 @@
                   </div>
                 </li>
                 <li class="menu-list-item megamenu-wrapper">
-                  <a href="shop.html" class="menu-link">Shop
+                  {% url 'shop' as url %}
+                  <a href="{{url}}" class="menu-link">Shop
                     <i class="bi bi-chevron-down"></i>
                   </a>
                   <div class="menu-dropdown-wrapper">
@@ -110,11 +111,13 @@
                   </div>
                 </li>
                 <li class="menu-list-item">
-                  <a href="blog.html" class="menu-link">Blog
+                  {% url 'blog' as url %}
+                  <a href="{{url}}" class="menu-link">Blog
                   </a>
                 </li>
                 <li class="menu-list-item">
-                  <a href="contact.html" class="menu-link">Contact</a>
+                  {% url 'contact' as url %}
+                  <a href="{{url}}" class="menu-link">Contact</a>
                 </li>
               </ul>
             </nav>
@@ -122,7 +125,8 @@
           </div>
           <div class="header-right">
             <div class="header-right-links">
-              <a href="account.html">
+              {% url 'account' as url %}
+              <a href="{{url}}">
                 <i class="bi bi-person"></i>
               </a>
               <button class="search-button">
@@ -132,7 +136,8 @@
                 <i class="bi bi-heart"></i>
               </a>
               <div class="header-cart">
-                <a href="cart.html" class="header-cart-link">
+                {% url 'cart' as url %}
+                <a href="{{url}}" class="header-cart-link">
                   <i class="bi bi-bag"></i>
                   <span class="header-cart-count">0</span>
                 </a>
