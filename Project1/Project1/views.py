@@ -1,5 +1,6 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render,redirect
+from .form import login
 
 def home(request):
     """
@@ -27,13 +28,19 @@ def blog(request):
 
 def account(request):
     try:
-        username = request.POST.get("username")
-        password=request.POST.get("password")
-        print(f"Username: {username}, Password: {password}")
-        data={"username": username, "password": password}
-    except KeyError:
+        form={"form":login}
+        if request.method == "POST":
+                # Handle form submission
+                # For example, you can access form data like this:
+            username = request.POST.get("username")
+            password=request.POST.get("password")
+            print(f"Username: {username}, Password: {password}")
+            data={"username": username, "password": password}
+            form={"form":login}
+            return redirect ("/cart/")
+    except:
         print("Username or password not provided in the request.")
-    return render(request, "account.html",data)
+    return render(request, "account.html",form)
 
 def contact(request):
     """

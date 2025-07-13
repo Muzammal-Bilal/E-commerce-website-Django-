@@ -37,8 +37,8 @@
         <div class="account-column">
           <h2>Login</h2>
           <form method="POST" action="/account/">
-            {% csrf_token %}
-            <div>
+            {% csrf_token %} 
+            <!-- <div>
               <label>
                 <label class="required"> Username or email address </label>
                 <input type="text"name="username">
@@ -49,7 +49,8 @@
                 <label class="required">Password </label>
                 <input type="password" name="password">
               </label>
-            </div>
+            </div> -->
+            {{form}}
             <p class="remember">
               <label>
                 <input type="checkbox">
